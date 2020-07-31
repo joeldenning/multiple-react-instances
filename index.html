@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <script type="systemjs-importmap">
+      {
+        "scopes": {
+          "/lib/old-react/": {
+            "react": "https://cdn.jsdelivr.net/npm/react@15/dist/react.js",
+            "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@15/dist/react-dom.js"
+          },
+          "/lib/new-react/": {
+            "react": "https://cdn.jsdelivr.net/npm/react@16/umd/react.development.js",
+            "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16/umd/react-dom.development.js"
+          },
+          "/lib/mixed-react/": {
+            "react": "https://cdn.jsdelivr.net/npm/react@16/umd/react.development.js",
+            "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16/umd/react-dom.development.js"
+          },
+          "https://cdn.jsdelivr.net/npm/react-dom@16/": {
+            "react": "https://cdn.jsdelivr.net/npm/react@16/umd/react.development.js"
+          },
+          "https://cdn.jsdelivr.net/npm/react-dom@15/": {
+            "react": "https://cdn.jsdelivr.net/npm/react@15/dist/react.js"
+          }
+        }
+      }
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/systemjs/dist/extras/named-exports.js"></script>
+  </head>
+  <body>
+    <div id="old-react"></div>
+    <div id="new-react"></div>
+    <div id="mixed-react"></div>
+    <script>
+      System.import("/lib/old-react/old-react.js");
+      System.import("/lib/new-react/new-react.js");
+      System.import("/lib/mixed-react/mixed-react.js");
+    </script>
+  </body>
+</html>

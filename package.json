@@ -1,0 +1,22 @@
+{
+  "name": "multiple-react-instances",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:joeldenning/multiple-react-instances.git",
+  "author": "Joel Denning <joeldenning@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently -n :w yarn:serve-static yarn:watch",
+    "serve-static": "http-server .",
+    "watch": "babel src --out-dir lib --source-maps --watch"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.0",
+    "@babel/plugin-transform-modules-systemjs": "^7.10.5",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "concurrently": "^5.2.0",
+    "http-server": "^0.12.3"
+  }
+}
