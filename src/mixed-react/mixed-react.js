@@ -9,10 +9,10 @@ export default MixedReact
 
 function MixedReact(props) {
   return (
-    <h1>
-      Mixed react:
+    <div>
+      <h1>Mixed react:</h1>
       <OldReact />
       <NewReact />
-    </h1>
+    </div>
   )
 }
