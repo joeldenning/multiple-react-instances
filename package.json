@@ -6,7 +6,7 @@
   "author": "Joel Denning <joeldenning@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently -n :w yarn:serve-static yarn:watch",
+    "start": "concurrently -n yarn:serve-static yarn:watch",
     "serve-static": "http-server .",
     "watch": "babel src --out-dir lib --source-maps --watch"
   },
